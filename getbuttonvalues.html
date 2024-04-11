@@ -1,0 +1,19 @@
+<button id="one" onclick="a1()">praveen</button>
+<button id="two"  onclick="b1()">Tamil</button>
+<button id="three" onclick="c1()">sarava</button>
+<h1 id="change"></h1>
+<script>
+    var a=document.getElementById("one")
+    var b=document.getElementById("two")
+    var c=document.getElementById("three")
+    var change=document.getElementById("change")
+    function a1(){
+        change.textContent=a.textContent;
+    }
+ function b1(){
+    change.textContent=b.textContent;  
+    }
+    function c1(){
+        change.textContent=c.textContent;  
+    }
+</script>

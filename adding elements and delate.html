@@ -1,0 +1,39 @@
+
+    <input id="one">
+    <button onclick="add()">Add</button>
+    <div id="two"></div>
+
+    <script>
+        var one = document.getElementById("one");
+        var two = document.getElementById("two");
+
+        function add() {
+            var inputValue = one.value.trim(); 
+
+            if (inputValue !== '') {
+                
+                var newElement = document.createElement("h1");
+                newElement.textContent = inputValue;
+
+              
+                var deleteButton = document.createElement('button');
+                deleteButton.textContent = 'Delete';
+
+               
+                newElement.appendChild(deleteButton);
+
+              
+                deleteButton.addEventListener('click', function() {
+                   
+                    newElement.remove();
+                });
+
+                
+                two.insertAdjacentElement("afterbegin", newElement);
+
+               
+                one.value = '';
+            }
+        }
+    </script>
+

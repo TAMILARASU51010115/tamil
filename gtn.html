@@ -1,0 +1,31 @@
+<h1>guess the number</h1>
+<input id="inp">
+<button id="but" onclick="gues()">check</button>
+<h1 id="id1">your are wrong or right</h1>
+<h1 id="scr"> total score:10</h1>
+
+<script>
+    var inpu=document.getElementById("inp")
+    var check=document.getElementById("but")
+    var guess=document.getElementById("id1")      
+    var score=document.getElementById("scr")
+    var point=10
+    random = Math.floor(Math.random() * 10) + 1;
+console.log(random)
+     function gues(){
+        getvalue=inpu.value
+        if (getvalue==random){
+            guess.textContent="you are right";
+        }
+        else{
+            guess.textContent="you are wrong";
+            point=point-1
+            score.textContent="score:"+point;
+        }
+        
+        
+
+     }
+
+
+</script>
